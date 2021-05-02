@@ -7,4 +7,72 @@ is same as
 git branch NEW-BRANCH-NAME -- make a branch
 git checkout NEW-BRANCH-NAME -- check it out
 
-remember to publihs branch to tell github about it 
+-------------
+
+
+Install git
+Install GiTHub Pull Requests and Issues
+
+Navaigate to workspace
+
+git init
+
+  git config --global user.email "chris_l_coles@hotmail.com"
+  git config --global user.name "Chris Coles"
+
+git clone https://github.com/Chris-Coles/Loan-Classifier.git
+
+## new branches
+
+##git checkout just makes a local branch
+git checkout #track origin/ makes a branch from a remote source 
+
+git checkout --track origin/Data-Load
+
+git status
+
+## add to a commit
+git add notebooks/
+
+
+
+  git commit --all -m "First Commit"
+  git push
+  git revert
+
+## revert commit
+# destroy the whole thing - https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git
+  git reset --hard HEAD~1
+  git reset HEAD~1
+
+## can ignore a folder by adding a gitignore file the following is a windows cmd to add this file
+
+echo >  "./Loan Data/.gitignore" 
+
+## merging into master braqnch
+
+$ git checkout master
+$ git merge new-branch
+
+git checkout master
+git pull origin master
+git merge test
+git push origin master
+
+https://stackoverflow.com/questions/5601931/what-is-the-best-and-safest-way-to-merge-a-git-branch-into-master
+
+## tagging a barnch and moving on
+
+git tag -a v0.041020,1 -m "Data Load" # -a annotates it -m is a message
+git tag -n # confirm it is there 
+git push --tags
+
+
+git tag archive/<branchname> <branchname>
+git branch -d <branchname>
+git checkout master
+
+## new branch
+
+git checkout -b data-analytics
+git push -u origin data-analytics
